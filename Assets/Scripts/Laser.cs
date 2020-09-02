@@ -20,7 +20,6 @@ public class Laser : MonoBehaviour
 
     void MoveUp()
     {
-
         transform.Translate(Vector3.up * _speed * Time.deltaTime);
         if (transform.position.y > 8f)
         {
@@ -31,24 +30,20 @@ public class Laser : MonoBehaviour
             {
                 Destroy(transform.parent.gameObject);
             }
-
             Destroy(this.gameObject);
         }
     }
 
     void MoveDown()
     {
-
         transform.Translate(Vector3.down * _speed * Time.deltaTime);
         if (transform.position.y < -8f)
         {
             if (transform.parent != null)
             {
                Destroy(transform.parent.gameObject);
-                
             }
             Destroy(this.gameObject);
-            
         }
     }
 
@@ -59,7 +54,7 @@ public class Laser : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.tag == "Player" && _isEnemyLaser == true)
+        if (other.CompareTag("Player") && _isEnemyLaser == true)
         {
             Player player = other.GetComponent<Player>();
             if (player!=null)

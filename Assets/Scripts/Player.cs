@@ -157,7 +157,7 @@ public class Player : MonoBehaviour
         }
         else
         {
-
+            
         }
 
         _lives--;                   // Method 1

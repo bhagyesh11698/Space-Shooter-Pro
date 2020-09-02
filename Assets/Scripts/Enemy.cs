@@ -89,7 +89,7 @@ public class Enemy : MonoBehaviour
 
             //destroy object after 2.8 second so that animation plays
             
-            Destroy(this.gameObject,2.8f); 
+            //Destroy(this.gameObject,2.8f); 
         }
             // If other is laser - laser - destroy us
         if(other.tag=="Laser")
